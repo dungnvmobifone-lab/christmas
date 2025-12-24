@@ -11,7 +11,7 @@
 	<script src="https://unpkg.com/gsap@3/dist/DrawSVGPlugin.min.js"></script>
 	<script src="https://unpkg.com/gsap@3/dist/Physics2DPlugin.min.js"></script>
 	<script src="https://unpkg.com/gsap@3/dist/MorphSVGPlugin.min.js"></script>
-	<svg class="mainSVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	<svg id="playBox" class="mainSVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
 		viewBox="0 0 800 600">
 		<defs>
 			<circle id="circ" class="particle" cx="0" cy="0" r="1" />
@@ -108,7 +108,16 @@
 			</span>
 		</foreignObject>
 	</svg>
+	<audio style="display: none;" id="bgMusic" src="music.mp3"></audio>
 	<!-- Your JS -->
 	<script src="script.js"></script>
+	<script>
+		const box = document.getElementById("playBox");
+		const music = document.getElementById("bgMusic");
+
+		box.addEventListener("click", () => {
+			music.play();
+		});
+	</script>
 
 </body>
