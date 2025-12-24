@@ -45,6 +45,19 @@ svg{
   letter-spacing: 1px;
 }
 
+@media only screen and (min-width: 1200px) {
+  #endMessage{
+    font-family: mountains_of_christmasregular;
+    font-size: 1rem;
+    text-anchor: middle;
+    text-align: center;
+    fill: #FFFFFF;
+    color: #FFFFFF;
+    opacity:0;
+    letter-spacing: 1px;
+  }
+}
+
 a {
   color: white;
   text-decoration: underline dotted #FFFFFF;
